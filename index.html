@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mi Proyecto AR</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://rawcdn.githack.com/AR-js-org/AR.js/3.3.2/aframe/build/aframe-ar-nft.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs='sourceType: webcam;'>
+      <a-marker type='pattern' url='markers/Target.patt'>
+        <!-- Verifica la ruta del modelo y ajusta la escala si es necesario -->
+        <a-entity gltf-model="url(models/AmericanSoccer.glb)" scale="1 1 1" position="0 0 0"></a-entity>
+        <a-text value="Amercian Football" position="-.3 1 0"  color="black"></a-text>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
