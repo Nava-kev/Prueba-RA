@@ -10,7 +10,12 @@
     <a-scene embedded arjs='sourceType: webcam;'>
       <a-marker type='pattern' url='markers/Target.patt'>
         <!-- Verifica la ruta del modelo y ajusta la escala si es necesario -->
-        <a-entity gltf-model="url(models/AmericanSoccer.glb)" scale="1 1 1" position="0 0 0"></a-entity>
+        <a-entity gltf-model="url(models/AmericanSoccer.glb)" scale=".5 .5 .5" position="0 0 0"></a-entity>
+        <a-aanimation attribute = "rotation"
+                    to = "0 360 0"
+                    dur = "5000"
+                    repeat = "indefinite" ></a-aanimation>
+        <a-sound src = "url(sounds/Fondo.mp3)" autoplay="true"></a-sound>
         <a-text value="American Football" position="-.3 1 0"  color="black"></a-text>
       </a-marker>
       <a-entity camera></a-entity>
